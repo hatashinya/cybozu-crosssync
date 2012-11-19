@@ -111,12 +111,35 @@ namespace Cybozu.CrossSync
 
         public static void GetEvents(App app, Schedule schedule, string postfix, DateTime start, DateTime end, ScheduleEventCollection eventTo, ScheduleEventCollection eventFrom)
         {
-            ScheduleEventCollection eventList = schedule.GetEventsByTarget(start, end, Schedule.TargetType.User, app.UserId);
+            DateTime marginStart = start.AddDays(-1.0);
+            DateTime marginEnd = end.AddDays(1.0);
+            ScheduleEventCollection eventList = schedule.GetEventsByTarget(marginStart, marginEnd, Schedule.TargetType.User, app.UserId);
 
             Properties.Settings settings = Properties.Settings.Default;
 
             foreach (ScheduleEvent scheduleEvent in eventList)
             {
+                if (scheduleEvent.StartOnly)
+                {
+                    if (scheduleEvent.Start.CompareTo(start) < 0) continue;
+                }
+                else if (scheduleEvent.AllDay || scheduleEvent.IsBanner)
+                {
+                    if (scheduleEvent.End.CompareTo(start) < 0) continue;
+                }
+                else
+                {
+                    if (scheduleEvent.Start.Equals(scheduleEvent.End))
+                    {
+                        if (scheduleEvent.End.CompareTo(start) < 0) continue;
+                    }
+                    else
+                    {
+                        if (scheduleEvent.End.CompareTo(start) <= 0) continue;
+                    }
+                }
+                if (scheduleEvent.Start.CompareTo(end) >= 0) continue;
+
                 if (scheduleEvent.Detail.EndsWith(postfix) || scheduleEvent.Description.StartsWith(DescriptionHeaderName))
                 {
                     //if (scheduleEvent.MemberCount <= 1)
