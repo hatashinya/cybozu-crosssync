@@ -138,25 +138,13 @@ namespace Cybozu.CrossSync
                 ScheduleEvent srcEvent = srcEventList[i];
 
                 bool fromDest = false;
-                ScheduleEvent destEvent = FindEventFromTitle(srcEvent, origEventList, string.Empty);
+                ScheduleEvent destEvent = FindPairdEvent(srcEvent, origEventList, string.Empty);
                 if (destEvent == null)
                 {
-                    destEvent = FindEventFromTitle(srcEvent, destEventList, postfix);
+                    destEvent = FindPairdEvent(srcEvent, destEventList, postfix);
                     fromDest = true;
                 }
                 if (destEvent == null) continue;
-
-                if (!srcEvent.Start.Equals(destEvent.Start)) continue;
-
-                if (srcEvent.StartOnly)
-                {
-                    if (!destEvent.StartOnly) continue;
-                }
-                else
-                {
-                    if (destEvent.StartOnly) continue;
-                    if (!srcEvent.End.Equals(destEvent.End)) continue;
-                }
 
                 srcEventList.Remove(srcEvent);
                 if (fromDest)
@@ -224,7 +212,7 @@ namespace Cybozu.CrossSync
             schedule.AddEvents(newEventsList);
         }
 
-        public static ScheduleEvent FindEventFromTitle(ScheduleEvent srcEvent, ScheduleEventCollection eventList, string postfix)
+        public static ScheduleEvent FindPairdEvent(ScheduleEvent srcEvent, ScheduleEventCollection eventList, string postfix)
         {
             string detail = srcEvent.Detail + postfix;
 
@@ -235,9 +223,21 @@ namespace Cybozu.CrossSync
                 // compare event type
                 if ((srcEvent.IsBanner && !scheduleEvent.IsBanner) || (!srcEvent.IsBanner && scheduleEvent.IsBanner)) continue;
 
-                // comapre start date
-                string destDate = Utility.FormatXSDDate(scheduleEvent.Start);
-                if (srcDate != destDate) continue;
+                // compare start date and time
+                if (!srcEvent.Start.Equals(scheduleEvent.Start)) continue;
+
+                // compare start only flag
+                if (srcEvent.StartOnly)
+                {
+                    if (!scheduleEvent.StartOnly) continue;
+                }
+                else
+                {
+                    if (scheduleEvent.StartOnly) continue;
+
+                    // compare end date and time
+                    if (!srcEvent.End.Equals(scheduleEvent.End)) continue;
+                }
 
                 // compare plan
                 if (srcEvent.Plan != scheduleEvent.Plan) continue;
