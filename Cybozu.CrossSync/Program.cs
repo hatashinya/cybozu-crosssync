@@ -239,8 +239,6 @@ namespace Cybozu.CrossSync
         {
             string detail = srcEvent.Detail + postfix;
 
-            string srcDate = Utility.FormatXSDDate(srcEvent.Start);
-
             foreach (ScheduleEvent scheduleEvent in eventList)
             {
                 // compare event type
