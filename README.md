@@ -35,12 +35,13 @@ Cybozu CrossSync は2つのサイボウズ製品のスケジュールをバッ�
 --------------
 ### クライアント側
 * Windows 7
+* Windows 8
 
 インストール
 ------------
 サーバーマシンではなく、 **クライアントのPCにインストール** します。
 
-1. **[ダウンロード](http://hatashinya.github.io/cybozu-crosssync/)** ページからインストーラー（ **CrossSync-1.0.*.msi** ）をダウンロードします。
+1. **[Releases](https://github.com/hatashinya/cybozu-crosssync/releases)** ページからインストーラー（ **CrossSync-1.0.*.msi** ）をダウンロードします。
 2. ダウンロードしたインストーラーをダブルクリックして起動します。
 3. インストーラーにしたがって、以下の項目を指定します。
    * インストール場所
@@ -51,7 +52,7 @@ URLの指定について
 -----------------
 同期するサイボウズ製品のURLの指定方法は以下の通りとなります。
 
-* サイボウズ(R) Office(R) 8 または 9
+* サイボウズ(R) Office(R)
   * 例） `http://example.com/scripts/cbag/ag.exe`
   * 例） `http://example.com/cgi-bin/cbag/ag.cgi`
 * サイボウズ(R) ガルーン(R)

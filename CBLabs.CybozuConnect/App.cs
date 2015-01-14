@@ -41,7 +41,7 @@ namespace CBLabs.CybozuConnect
             {
                 this.cybozuType = CybozuType.Garoon;
             }
-            else if (url.IndexOf(".cybozu.com/g/") >= 0)
+            else if (url.IndexOf(".cybozu.com/g/") >= 0 || url.IndexOf(".cybozu.cn/g/") >= 0)
             {
                 this.cybozuType = CybozuType.GaroonCloud;
             }

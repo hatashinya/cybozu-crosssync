@@ -139,7 +139,19 @@ namespace Cybozu.CrossSync
             }
 
             string url1 = TrimUrl(this.firstUrl.Text);
+            if (string.IsNullOrEmpty(url1))
+            {
+                MessageBox.Show(string.Format(Resources.Account1Error, Resources.URLIsInvalid), Resources.ProductName);
+                return false;
+            }
+
             string url2 = TrimUrl(this.secondUrl.Text);
+            if (string.IsNullOrEmpty(url2))
+            {
+                MessageBox.Show(string.Format(Resources.Account2Error, Resources.URLIsInvalid), Resources.ProductName);
+                return false;
+            }
+
             App app;
 
             try
@@ -153,6 +165,11 @@ namespace Cybozu.CrossSync
                 {
                     MessageBox.Show(string.Format(Resources.Account1Error, ex.Message), Resources.ProductName);
                 }
+                return false;
+            }
+            catch (UriFormatException ex)
+            {
+                MessageBox.Show(ex.Message);
                 return false;
             }
             catch (WebException ex)
@@ -177,6 +194,11 @@ namespace Cybozu.CrossSync
                 {
                     MessageBox.Show(string.Format(Resources.Account2Error, ex.Message), Resources.ProductName);
                 }
+                return false;
+            }
+            catch (UriFormatException ex)
+            {
+                MessageBox.Show(ex.Message);
                 return false;
             }
             catch (WebException ex)
@@ -261,7 +283,7 @@ namespace Cybozu.CrossSync
 
         protected string TrimUrl(string url)
         {
-            string[] EndMarks = { ".exe", ".cgi", ".cybozu.com/g/" };
+            string[] EndMarks = { ".exe", ".cgi", ".cybozu.com/g/", ".cybozu.cn/g/" };
             foreach (string endMark in EndMarks)
             {
                 if (url.EndsWith(endMark)) return url;

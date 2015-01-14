@@ -145,4 +145,7 @@ Cybozu CrossSync uses Cybozu Office API. Depending on the version of the prorudc
   <data name="ProductName" xml:space="preserve">
     <value>Cybozu CrossSync</value>
   </data>
+  <data name="URLIsInvalid" xml:space="preserve">
+    <value>URL is invalid.</value>
+  </data>
 </root>

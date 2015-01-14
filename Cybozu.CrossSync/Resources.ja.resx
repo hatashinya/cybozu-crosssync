@@ -145,4 +145,7 @@ Cybozu CrossSync はサイボウズ Office の連携APIを利用しています�
   <data name="ProductName" xml:space="preserve">
     <value>Cybozu CrossSync</value>
   </data>
+  <data name="URLIsInvalid" xml:space="preserve">
+    <value>無効なURLです。</value>
+  </data>
 </root>

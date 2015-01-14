@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_09FEF9D5331D4F6C8D8D3ED69E020106"
+        "OwnerKey" = "8:_086B4B3C691D4C13B634EF324B765A33"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5C9C60BEC7724B23AD508ABD0AE94915"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -51,12 +57,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_EFD307D5C5AA61530E10C51F20AAFD1E"
-        "OwnerKey" = "8:_086B4B3C691D4C13B634EF324B765A33"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_FDFCB6CA4AAF4256A35E559E9656EE3B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EFD307D5C5AA61530E10C51F20AAFD1E"
+        "OwnerKey" = "8:_09FEF9D5331D4F6C8D8D3ED69E020106"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -87,7 +87,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\CrossSync-1.0.4.msi"
+        "OutputFilename" = "8:Debug\\CrossSync-1.0.5.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -124,7 +124,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\CrossSync-1.0.4.msi"
+        "OutputFilename" = "8:Release\\CrossSync-1.0.5.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -240,6 +240,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_09FEF9D5331D4F6C8D8D3ED69E020106"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:CBLabs.CybozuConnect, Version=1.0.5491.32387, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_09FEF9D5331D4F6C8D8D3ED69E020106"
+                    {
+                    "Name" = "8:CBLabs.CybozuConnect.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:CBLabs.CybozuConnect.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_37AD96AEB9844BD9AA5F99D338D38B51"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5C9C60BEC7724B23AD508ABD0AE94915"
             {
             "SourcePath" = "8:CustomActionCreateStartup.vbs"
@@ -318,32 +349,6 @@
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EFD307D5C5AA61530E10C51F20AAFD1E"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CBLabs.CybozuConnect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:CBLabs.CybozuConnect.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_37AD96AEB9844BD9AA5F99D338D38B51"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FDFCB6CA4AAF4256A35E559E9656EE3B"
@@ -433,20 +438,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Cybozu CrossSync"
-        "ProductCode" = "8:{58792729-F14F-477D-97BF-67097376C382}"
-        "PackageCode" = "8:{6F035257-C61B-4DC9-BB9C-36BA62CE7252}"
+        "ProductCode" = "8:{840E0454-6B8F-4228-A1D5-F6E09A650102}"
+        "PackageCode" = "8:{5763D3C6-15E8-4BC1-B7B6-71C3CF4790C9}"
         "UpgradeCode" = "8:{64C6CDDD-B1F1-4D42-8DAD-00A63A741633}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.4"
+        "ProductVersion" = "8:1.0.5"
         "Manufacturer" = "8:Cybozu Labs"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Cybozu CrossSync Setup"
-        "Subject" = "8:Cybozu CrossSync 1.0.4"
+        "Subject" = "8:Cybozu CrossSync 1.0.5"
         "ARPCONTACT" = "8:Cybozu Labs, Inc."
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
