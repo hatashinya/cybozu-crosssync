@@ -70,13 +70,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_086B4B3C691D4C13B634EF324B765A33"
+        "OwnerKey" = "8:_09FEF9D5331D4F6C8D8D3ED69E020106"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_09FEF9D5331D4F6C8D8D3ED69E020106"
+        "OwnerKey" = "8:_086B4B3C691D4C13B634EF324B765A33"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -87,7 +87,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\CrossSync-1.0.5.msi"
+        "OutputFilename" = "8:Debug\\CrossSync-1.0.6.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -106,11 +106,6 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Client.3.5"
-                    {
-                    "Name" = "8:.NET Framework 3.5 SP1 Client Profile"
-                    "ProductCode" = "8:Microsoft.Net.Client.3.5"
-                    }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
                     {
                     "Name" = "8:Windows インストーラー 3.1"
@@ -124,7 +119,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\CrossSync-1.0.5.msi"
+        "OutputFilename" = "8:Release\\CrossSync-1.0.6.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -143,11 +138,6 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Client.3.5"
-                    {
-                    "Name" = "8:.NET Framework 3.5 SP1 Client Profile"
-                    "ProductCode" = "8:Microsoft.Net.Client.3.5"
-                    }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
                     {
                     "Name" = "8:Windows インストーラー 3.1"
@@ -232,7 +222,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v3.5,Profile=Client"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.5"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=131000"
                 }
@@ -244,7 +234,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CBLabs.CybozuConnect, Version=1.0.5491.32387, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:CBLabs.CybozuConnect, Version=1.0.6702.28349, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_09FEF9D5331D4F6C8D8D3ED69E020106"
@@ -438,20 +428,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Cybozu CrossSync"
-        "ProductCode" = "8:{840E0454-6B8F-4228-A1D5-F6E09A650102}"
-        "PackageCode" = "8:{5763D3C6-15E8-4BC1-B7B6-71C3CF4790C9}"
+        "ProductCode" = "8:{7513DA0F-C465-4A7B-B970-C021E31AED09}"
+        "PackageCode" = "8:{7A868061-957A-407C-81C5-97C6FDFD6CA1}"
         "UpgradeCode" = "8:{64C6CDDD-B1F1-4D42-8DAD-00A63A741633}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.5"
+        "ProductVersion" = "8:1.0.6"
         "Manufacturer" = "8:Cybozu Labs"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Cybozu CrossSync Setup"
-        "Subject" = "8:Cybozu CrossSync 1.0.5"
+        "Subject" = "8:Cybozu CrossSync 1.0.6"
         "ARPCONTACT" = "8:Cybozu Labs, Inc."
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
