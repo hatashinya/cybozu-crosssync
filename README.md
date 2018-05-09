@@ -23,19 +23,18 @@ Cybozu CrossSync は2つのサイボウズ製品のスケジュールをバッ�
 ------------
 ### サーバー側
 * 以下のいずれかのサイボウズ製品
-  * [サイボウズ(R) Office(R)](http://products.cybozu.co.jp/office/) Version 8.1.0 以降
-  * [サイボウズ(R) ガルーン(R)](http://products.cybozu.co.jp/garoon/) Version 3.0.0 以降
+  * [サイボウズ(R) Office(R)](https://products.cybozu.co.jp/office/) Version 8.1.0 以降
+  * [サイボウズ(R) ガルーン(R)](https://garoon.cybozu.co.jp/) Version 3.0.0 以降
   * サイボウズ(R) Office(R) on [cybozu.com](https://www.cybozu.com/)
   * Garoon(R) on [cybozu.com](https://www.cybozu.com/)
 
 ### クライアント側
-* .NET Framework 3.5
+* .NET Framework 4.5
 
 動作確認済みOS
 --------------
 ### クライアント側
-* Windows 7
-* Windows 8
+* Windows 10
 
 インストール
 ------------
@@ -76,7 +75,7 @@ URLの指定について
 
 開発環境
 --------
-* Visual Studio 2010
+* Visual Studio 2017
 
 開発・提供元
 ------------
