@@ -151,6 +151,8 @@ namespace CBLabs.CybozuConnect
                     throw new CybozuException("Unexpected");
             }
 
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+
             WebRequest request = WebRequest.Create(url);
             request.Method = "POST";
             request.ContentType = string.Format("application/soap+xml; charset=utf-8; action=\"{0}\"", method);
